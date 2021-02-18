@@ -1,5 +1,5 @@
 import Project from './Project'
-import FireflyLogo from './FireflyLogo.png'
+import FireflyLogo from './Images/FireflyLogo.png'
 
 const Projects = () => {
     const cyberText = `I joined the Cybersole LTD team [Better known for their product, CyberAIO] around Spring 2017 after originally being hired via my freelance business, Divided Design, to produce branding for the company.
