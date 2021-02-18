@@ -8,6 +8,7 @@ const App = () => {
   const [showAboutMe, setShowAboutMe] = useState()
   const [gitData, setGitData] = useState([])
   const [trackData, setTrackData] = useState([])
+  const [bitcoinPrice, setBitcoinPrice] = useState([])
 
   const state={
     device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
@@ -36,14 +37,31 @@ const App = () => {
     }
     getTracks()
     setInterval(() => {
-      const getTracks = async () => {
-        const d = await fetchTrack()
-        setTrackData(d)
-      }
       getTracks()
     }, 6000);
   }, [])
 
+  useEffect(() => {
+    const getValue = async () => {
+      const d = await fetchBitcoin()
+      const val = d.bpi.USD.rate
+      // const val = d.USD.buy.toFixed(2)
+      console.log(val)
+      setBitcoinPrice(val)
+    }
+    getValue()
+    setInterval(() => {
+      getValue()
+    }, 30000);
+  }, [])
+
+  // Fetch Bitcoin Value
+  const fetchBitcoin = async () => {
+    const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+    // const res = await fetch('https://blockchain.info/ticker', {cache: "no-store"})
+    const data = await res.json()
+    return data
+  }
 
   // Fetch GitHub Profile
   const fetchGit = async () => {
@@ -88,9 +106,10 @@ const App = () => {
     <Router>
       <Route path='/' exact render={(props) => (
         <>
-          <div className='screen' style={isPlaying ? { backgroundImage: `url(${ourTrack.image.slice(-1)[0]['#text']})` } : {}}>
+          <div className='screen' >
+            {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
             <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
-            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} device={deviceState} />
+            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} device={deviceState} />
           </div>
         </>
       )} />

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 const PortfolioButton = ({ setShowAboutMe }) => {
     return (
         <div id='portfolioButton'>
-            <Link to='/portfolio'>
-                <button className='ghost-button' onClick={() => setShowAboutMe(undefined)} >
+            <Link to='/#'>
+                <div className='ghost-button' onClick={() => setShowAboutMe(undefined)} >
                     <h3>Portfolio</h3>
-                </button>
+                </div>
             </Link>
         </div>
     )

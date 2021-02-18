@@ -1,5 +1,4 @@
-import FireflyCompanion from './FireflyCompanion'
-
+import Project from './Project'
 import FireflyLogo from './FireflyLogo.png'
 
 const Projects = () => {
@@ -14,8 +13,8 @@ const Projects = () => {
     Although my role at Cybersole LTD is no longer very "hands on" I still maintain a stance inside the business and handle odd-jobs, social media, PR and the occasional release guide.`
     return (
         <div className='projects-container'>
-            <FireflyCompanion id='firefly-companion' projectTitle='Firefly Companion' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
-            <FireflyCompanion id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
+            <Project id='firefly-companion' projectTitle='Firefly Companion' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
+            <Project id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
         </div>
     )
 }

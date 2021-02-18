@@ -13,7 +13,7 @@ const NowPlaying = ({ track, device }) => {
     }
     return (
         <div id={device.device === 'computer' ? 'nowPlaying' : 'nowPlayingMobile'}>
-            <a href={track.url} target='_blank' rel='noopener noreferrer'><h4>Listening to {track.name} by {track.artist['#text'] } </h4></a>
+            <a href={track.url} target='_blank' rel='noopener noreferrer'><h3 className='now-playing-text'>Listening to <strong>{track.name}</strong> by <strong>{track.artist['#text'] }</strong> </h3></a>
             {/* <PlayCircleOutlineIcon fontSize="small" /> */}
         </div>
     )

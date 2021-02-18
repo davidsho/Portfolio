@@ -1,4 +1,4 @@
-const FireflyCompanion = ({ id, projectTitle, projectImage, projectText, projectRole }) => {
+const Project = ({ id, projectTitle, projectImage, projectText, projectRole }) => {
     return (
         <div id={id} className='project slide-in-left' >
             <div className='project-image-role-container'>
@@ -13,4 +13,4 @@ const FireflyCompanion = ({ id, projectTitle, projectImage, projectText, project
     )
 }
 
-export default FireflyCompanion
+export default Project
