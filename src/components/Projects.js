@@ -14,7 +14,7 @@ const Projects = () => {
     return (
         <div className='projects-container'>
             <Project id='firefly-companion' projectTitle='Firefly Companion' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
-            <Project id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
+            {/* <Project id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} /> */}
         </div>
     )
 }

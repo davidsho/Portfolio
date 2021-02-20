@@ -113,7 +113,12 @@ const App = () => {
           </div>
         </>
       )} />
-      <Route path='/portfolio' component={Portfolio} />
+      <Route path='/portfolio' render={(props) => (
+        <>
+            {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
+            <Portfolio track={trackData} device={deviceState} />
+        </>
+      )} />
     </Router>
   )
 }
