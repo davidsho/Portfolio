@@ -4,7 +4,7 @@ import NowPlaying from './NowPlaying'
 import Particles from 'react-particles-js'
 import { Link } from 'react-router-dom'
 
-const Portfolio = ({ track, device }) => {
+const Portfolio = ({ track }) => {
     let ourTrack, isPlaying;
     try {
         ourTrack = track.recenttracks.track[0]        
@@ -22,7 +22,7 @@ const Portfolio = ({ track, device }) => {
                 <h1>My Portfolio</h1>
             </div>
             <HomeButton />
-            {isPlaying && <NowPlaying track={ourTrack} device={device} />}
+            {isPlaying && <NowPlaying track={ourTrack} />}
             <Projects />
             <Particles id='particles-js' />
         </div>

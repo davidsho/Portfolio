@@ -10,12 +10,12 @@ const App = () => {
   const [trackData, setTrackData] = useState([])
   const [bitcoinPrice, setBitcoinPrice] = useState([])
 
-  const state={
-    device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
-    orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
-  }
+  // const state={
+  //   device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
+  //   orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
+  // }
 
-  const [deviceState, setDeviceState] = useState(state)
+  // const [deviceState, setDeviceState] = useState(state)
 
   useEffect(() => {
     console.log('Getting APIs')
@@ -77,14 +77,14 @@ const App = () => {
     return data
   }
 
-  const detect = () => {
-    setDeviceState({
-      device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
-      orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
-    })
-  }
+  // const detect = () => {
+  //   setDeviceState({
+  //     device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
+  //     orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
+  //   })
+  // }
 
-  window.addEventListener("resize", detect)
+  // window.addEventListener("resize", detect)
 
   // console.log(deviceState)
 
@@ -109,14 +109,14 @@ const App = () => {
           <div className='screen' >
             {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
             <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
-            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} device={deviceState} />
+            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} />
           </div>
         </>
       )} />
       <Route path='/portfolio' render={(props) => (
         <>
             {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
-            <Portfolio track={trackData} device={deviceState} />
+            <Portfolio track={trackData} />
         </>
       )} />
     </Router>

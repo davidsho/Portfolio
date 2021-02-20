@@ -89,6 +89,7 @@ img {
   cursor: pointer;
   color: white;
   opacity: 1;
+  z-index: 1;
 }
 #portfolioButton {
   position: absolute;
@@ -100,6 +101,7 @@ img {
   cursor: pointer;
   color: white;
   opacity: 1;
+  z-index: 1;
 }
 #nowPlaying {
   position: absolute;
@@ -246,7 +248,7 @@ a:hover {
   position: absolute;
   top: 500px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project {
@@ -259,6 +261,7 @@ a:hover {
   border-radius: 25px;
   padding: 20px;
   width: 900px;
+  /* height: 300px; */
   color: white;
   transition: 1s;
   z-index: 1;
@@ -273,7 +276,7 @@ a:hover {
 }
 
 .project-title-text-container {
-  width: 750px;
+  width: auto;
 }
 
 .project-image {
@@ -309,7 +312,7 @@ a:hover {
 #table-tennis-league {
   margin-top: 200px;
   left: -1000px;
-  position: relative;
+  position: absolute;
   /* overflow: hidden; */
 }
 

@@ -5,7 +5,7 @@ import NowPlaying from './NowPlaying'
 import Bitcoin from './Bitcoin'
 import Particles from 'react-particles-js'
 
-const Container = ({ showAboutMe, setShowAboutMe, track, bitcoinPrice, device }) => {
+const Container = ({ showAboutMe, setShowAboutMe, track, bitcoinPrice }) => {
     let ourTrack, isPlaying;
     try {
         ourTrack = track.recenttracks.track[0]        
@@ -24,7 +24,7 @@ const Container = ({ showAboutMe, setShowAboutMe, track, bitcoinPrice, device })
             <Title />
             <AboutMeButton onPress={() => setShowAboutMe(!showAboutMe)} />
             <PortfolioButton setShowAboutMe={setShowAboutMe} />
-            {isPlaying && <NowPlaying track={ourTrack} device={device} />}
+            {isPlaying && <NowPlaying track={ourTrack} />}
             <Bitcoin price={bitcoinPrice} />
             <Particles id='particles-js' />
         </div>
