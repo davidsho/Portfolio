@@ -20,8 +20,8 @@ const AboutMe = ({ obj, name, show }) => {
 
     return (
         <div id='aboutMeDiv' className={set_style()} >
-            <h3>{name}</h3>
-            <p>I'm an eighteen year old full-stack Node.js and Python engineer from the United Kingdom. I have a huge passion for creating and exploring new software and responsive, performant code. Programming since 14, I've learned many proper principals and frameworks. I consider myself forward-thinking and I always love to work in teams.</p>
+            <h3 className='aboutMeName'>{name}</h3>
+            <h4>I'm an eighteen year old full-stack Node.js and Python engineer from the United Kingdom. I have a huge passion for creating and exploring new software and responsive, performant code. Programming since 14, I've learned many proper principals and frameworks. I consider myself forward-thinking and I always love to work in teams.</h4>
             <div>
             {/* obj.avatar_url */}
                 <img src={ProfileImage} alt='Avatar' className='avatar' />

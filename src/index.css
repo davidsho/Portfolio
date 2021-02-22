@@ -25,16 +25,186 @@ body, input, textarea, button {
   background-repeat: no-repeat;
   background-size: cover;
 }
-h1 {
-  font-size: 300%;
-  font-weight:bold;
+@media screen and (max-width : 700px)
+{
+  h1 {
+    font-size: 200%;
+    font-weight:bold;
+  }
+  h2 {
+    font-size: 150%;
+  }
+  h3 {
+    font-size: 100%;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 80%;
+    font-weight: normal;
+  }
+  #welcome {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    -ms-transform: translate(-5%, -50%);
+    transform: translate(-5%, -50%);
+    opacity: 1;
+  }
+  #aboutMeDiv {
+    position: absolute;
+    opacity: 1;
+    margin: 0;
+    top: -400px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(3, 3, 29, 1);
+    border-radius: 25px;
+    padding: 20px;
+    width: 70%;
+    height: auto;
+    color: white;
+    transition: 1s;
+    z-index: 1;
+    align-items: center;
+  }
+  .aboutMeName {
+    display: none;
+  }
+  .avatar {
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 15px;
+  }
+  /* PORTFOLIO CSS */
+  .title {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    -ms-transform: translate(-5%, -15%);
+    transform: translate(-5%, -15%);
+    opacity: 1;
+  }
+  .projects-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+    width: 100%;
+    height: auto;
+  }
+  .project {
+    position: absolute;
+    opacity: 1;
+    margin-bottom: 200px;
+    -ms-transform: translate(-50%, -0%);
+    transform: translate(-50%, -0%);
+    background-color: rgb(3, 3, 29, 1);
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    color: white;
+    transition: 1s;
+    z-index: 1;
+    align-items: center;
+    overflow: auto;
+    display: block;
+  }
 }
-h2 {
-  font-size: 250%;
-}
-h3 {
-  font-size: 150%;
-  font-weight: bold;
+@media screen and (min-width : 700px) and (max-width : 10000px)
+{
+  h1 {
+    font-size: 300%;
+    font-weight:bold;
+  }
+  h2 {
+    font-size: 250%;
+  }
+  h3 {
+    font-size: 150%;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+  #welcome {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  #aboutMeDiv {
+    position: absolute;
+    opacity: 1;
+    margin: 0;
+    top: -400px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(3, 3, 29, 1);
+    border-radius: 25px;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    color: white;
+    transition: 1s;
+    z-index: 1;
+    align-items: center;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 15px;
+  }
+  /* PORTFOLIO CSS */
+  .title {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  .projects-container {
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    height: auto;
+  }
+  .project {
+    position: absolute;
+    opacity: 1;
+    margin-bottom: 200px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(3, 3, 29, 1);
+    border-radius: 25px;
+    padding: 20px;
+    width: 900px;
+    color: white;
+    transition: 1s;
+    z-index: 1;
+    align-items: center;
+    overflow: auto;
+    display: block;
+  }
 }
 img {
   width: 500px;
@@ -69,16 +239,6 @@ img {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-#welcome {
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
 #aboutMeButton {
   position: absolute;
   margin: 0;
@@ -89,7 +249,6 @@ img {
   cursor: pointer;
   color: white;
   opacity: 1;
-  z-index: 1;
 }
 #portfolioButton {
   position: absolute;
@@ -101,7 +260,6 @@ img {
   cursor: pointer;
   color: white;
   opacity: 1;
-  z-index: 1;
 }
 #nowPlaying {
   position: absolute;
@@ -114,6 +272,7 @@ img {
   cursor: pointer;
   color: white;
   opacity: 1;
+  width: 33%;
 }
 #bitcoin {
   position: absolute;
@@ -125,6 +284,7 @@ img {
   outline: none;
   color: white;
   opacity: 1;
+  width: 33%;
 }
 #nowPlayingMobile {
   position: absolute;
@@ -138,24 +298,7 @@ img {
   color: white;
   opacity: 1;
 }
-#aboutMeDiv {
-  position: absolute;
-  opacity: 1;
-  margin: 0;
-  top: -400px;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: rgb(3, 3, 29, 1);
-  border-radius: 25px;
-  padding: 20px;
-  width: 600px;
-  height: 300px;
-  color: white;
-  transition: 1s;
-  z-index: 1;
-  align-items: center;
-}
+
 #nowPlaying.a {
   color: white;
 }
@@ -223,52 +366,9 @@ a:hover {
 
 /* PORTFOLIO PAGE */
 
-.title {
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-.subtitle {
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 250px;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
 
-.projects-container {
-  position: absolute;
-  top: 500px;
-  width: 100%;
-  height: auto;
-}
 
-.project {
-  position: absolute;
-  opacity: 1;
-  margin-bottom: 200px;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: rgb(3, 3, 29, 1);
-  border-radius: 25px;
-  padding: 20px;
-  width: 900px;
-  /* height: 300px; */
-  color: white;
-  transition: 1s;
-  z-index: 1;
-  align-items: center;
-  overflow: auto;
-  display: block;
-}
+
 
 .project-image-role-container {
   float: left;

@@ -19,4 +19,4 @@ to minimise delays.
 - [x] Enable now playing on portfolio
 - [ ] Add more than one project on portfolio
 - [x] Fix support for mobile
-- [ ] Improve layout for mobile
+- [x] Improve layout for mobile
