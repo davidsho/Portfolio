@@ -1,4 +1,4 @@
-const GitHubStatus = ({ price }) => {
+const Bitcoin = ({ price }) => {
     return (
         <div id='bitcoin'>
             <h3>Bitcoin currently trading at ${price.toLocaleString()}</h3>
@@ -6,4 +6,4 @@ const GitHubStatus = ({ price }) => {
     )
 }
 
-export default GitHubStatus
+export default Bitcoin

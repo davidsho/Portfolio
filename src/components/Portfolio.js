@@ -4,7 +4,7 @@ import NowPlaying from './NowPlaying'
 import Particles from 'react-particles-js'
 import { Link } from 'react-router-dom'
 
-const Portfolio = ({ track }) => {
+const Portfolio = ({ track, setShowAboutMe }) => {
     let ourTrack, isPlaying;
     try {
         ourTrack = track.recenttracks.track[0]        
@@ -16,6 +16,7 @@ const Portfolio = ({ track }) => {
     } catch (error) {
         isPlaying = false
     }
+    setShowAboutMe(undefined)
     return (
         <div className='container'>
             <div className='title'>
