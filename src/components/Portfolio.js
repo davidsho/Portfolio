@@ -25,7 +25,7 @@ const Portfolio = ({ track, setShowAboutMe }) => {
             <HomeButton />
             {isPlaying && <NowPlaying track={ourTrack} />}
             <Projects />
-            <Particles id='particles-js' />
+            {!isPlaying && <Particles id='particles-js' />}
         </div>
     )
 }

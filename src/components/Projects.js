@@ -11,9 +11,12 @@ const Projects = () => {
     Over the last few years I've seen CyberAIO grow not only as a product but as a brand. I've also seen Lucas himself grow as a very capable and passionate developer with a great work ethic and a professional attitude towards business.
     
     Although my role at Cybersole LTD is no longer very "hands on" I still maintain a stance inside the business and handle odd-jobs, social media, PR and the occasional release guide.`
+    const latinText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus arcu nulla, dapibus sit amet quam nec, accumsan viverra quam. Maecenas nec lobortis dolor. Pellentesque accumsan elementum vulputate. Vestibulum tempor ipsum urna, eu fermentum neque aliquet at. Aliquam ac vestibulum tellus. Vestibulum suscipit id justo in semper. Integer ut imperdiet metus, sit amet iaculis erat. Praesent nec justo purus. Vestibulum in odio non diam iaculis accumsan imperdiet et elit. Morbi et pellentesque metus, eu venenatis diam. Nunc quis nisl quis tellus mollis pellentesque eget vitae est. Nulla posuere tortor et turpis accumsan congue eu sit amet mauris. Mauris vel sagittis est.
+
+    Aliquam gravida at erat sit amet interdum. Donec porttitor convallis ex vitae vulputate. Fusce nisl ex, imperdiet at mi vel, consectetur faucibus ligula. Praesent purus elit, pharetra ut ipsum quis, mollis commodo leo. Sed aliquam metus ac ipsum lacinia, id dignissim quam maximus. In mollis tortor non volutpat auctor. In eu libero a libero gravida elementum sed et erat. Cras vitae augue iaculis, congue tellus vel, tincidunt odio. Praesent cursus mattis blandit. Fusce nec erat in eros rhoncus luctus eu id elit. Vestibulum feugiat justo quis tempus fringilla. Duis rhoncus sollicitudin sagittis. Aenean malesuada sed velit non dictum. Nulla id tellus venenatis, dictum nisi id, vestibulum.`
     return (
         <div className='projects-container'>
-            <Project id='firefly-companion' projectTitle='Firefly Companion' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
+            <Project id='firefly-companion' projectTitle='Firefly Companion' projectText={latinText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
             {/* <Project id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} /> */}
         </div>
     )

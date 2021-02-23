@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Container from './components/Container'
 import AboutMe from './components/AboutMe'
 import Portfolio from './components/Portfolio'
+import DefaultBackground from './components/Images/DefaultBackground.jpeg'
 
 const App = () => {
   const [showAboutMe, setShowAboutMe] = useState()
@@ -72,7 +73,11 @@ const App = () => {
 
   // Fetch LastFM Track
   const fetchTrack = async () => {
-    const res = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=dvdshortland&api_key=dffc35d8f8602596a39469caa1739857&format=json&limit=1')
+    const davidKey = "dffc35d8f8602596a39469caa1739857"
+    const robKey = "5a8ebda021926a35d9ffb5aadc69ebc9"
+    const davidName = "dvdshortland"
+    const robName = "Robertcarter24"
+    const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${robName}&api_key=${robKey}&format=json&limit=1`)
     const data = await res.json()
     return data
   }
@@ -107,7 +112,7 @@ const App = () => {
       <Route path='/' exact render={(props) => (
         <>
           <div className='screen' >
-            {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
+            {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
             <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
             <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} />
           </div>
@@ -115,7 +120,7 @@ const App = () => {
       )} />
       <Route path='/portfolio' render={(props) => (
         <>
-            {isPlaying && <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div>}
+            {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
             <Portfolio track={trackData} setShowAboutMe={setShowAboutMe} />
         </>
       )} />

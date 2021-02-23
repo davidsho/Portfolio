@@ -20,4 +20,6 @@ to minimise delays.
 - [ ] Add more than one project on portfolio
 - [x] Fix support for mobile
 - [x] Improve layout for mobile
-- [ ] Add default background image
+- [x] Add default background image
+- [x] Edit colouring of text boxes
+- [x] Remove particles.js entirely on mobile and while song playing on desktop
