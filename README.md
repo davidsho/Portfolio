@@ -20,3 +20,4 @@ to minimise delays.
 - [ ] Add more than one project on portfolio
 - [x] Fix support for mobile
 - [x] Improve layout for mobile
+- [ ] Add default background image
