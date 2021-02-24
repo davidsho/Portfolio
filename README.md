@@ -24,3 +24,4 @@ to minimise delays.
 - [x] Edit colouring of text boxes
 - [x] Remove particles.js entirely on mobile and while song playing on desktop
 - [x] Improved image loading
+- [ ] New page for crypto tracking

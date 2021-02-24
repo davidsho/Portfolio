@@ -1,9 +1,8 @@
-import Projects from './Projects'
 import HomeButton from './HomeButton'
 import NowPlaying from './NowPlaying'
 import Particles from 'react-particles-js'
 
-const Portfolio = ({ track, setShowAboutMe }) => {
+const Crypto = ({ showAboutMe, setShowAboutMe, track }) => {
     let ourTrack, isPlaying;
     try {
         ourTrack = track.recenttracks.track[0]        
@@ -15,18 +14,13 @@ const Portfolio = ({ track, setShowAboutMe }) => {
     } catch (error) {
         isPlaying = false
     }
-    setShowAboutMe(undefined)
+
     return (
-        <div className='container'>
-            <div className='title'>
-                <h1>My Portfolio</h1>
-            </div>
+        <div className={`container `} onClick={() => {showAboutMe && setShowAboutMe(false)}}>
+            {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
             <HomeButton />
-            {isPlaying && <NowPlaying track={ourTrack} />}
-            <Projects />
-            {!isPlaying && <Particles id='particles-js' />}
         </div>
     )
 }
 
-export default Portfolio
+export default Crypto

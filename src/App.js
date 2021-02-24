@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Container from './components/Container'
 import AboutMe from './components/AboutMe'
 import Portfolio from './components/Portfolio'
+import Crypto from './components/Crypto'
 import DefaultBackground from './components/Images/DefaultBackground.jpeg'
 
 const App = () => {
@@ -120,7 +121,12 @@ const App = () => {
       )} />
       <Route path='/portfolio' render={(props) => (
         <>
-            <Portfolio track={trackData} setShowAboutMe={setShowAboutMe} />
+          <Portfolio track={trackData} setShowAboutMe={setShowAboutMe} />
+        </>
+      )} />
+      <Route path='/crypto' render={(props) => (
+        <>
+          <Crypto />
         </>
       )} />
     </Router>

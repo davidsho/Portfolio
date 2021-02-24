@@ -24,9 +24,8 @@ const Container = ({ showAboutMe, setShowAboutMe, track, bitcoinPrice }) => {
             <Title />
             <AboutMeButton onPress={() => setShowAboutMe(!showAboutMe)} />
             <PortfolioButton setShowAboutMe={setShowAboutMe} />
-            {isPlaying && <NowPlaying track={ourTrack} />}
+            {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
             <Bitcoin price={bitcoinPrice} />
-            {!isPlaying && <Particles id='particles-js' />}
         </div>
     )
 }

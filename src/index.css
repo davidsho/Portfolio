@@ -299,6 +299,7 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
   color: white;
   opacity: 1;
   max-width: 33%;
@@ -318,6 +319,9 @@ img {
 }
 
 #nowPlaying.a {
+  color: white;
+}
+#bitcoinText {
   color: white;
 }
 
