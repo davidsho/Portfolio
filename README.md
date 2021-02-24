@@ -1,6 +1,6 @@
 # Portfolio Site
 
-This project was bootstrapped with Create React App.
+This project was bootstrapped with Create React App. It is my first React project.
 
 ## Project Layout
 
