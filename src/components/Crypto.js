@@ -4,21 +4,10 @@ import NowPlaying from './NowPlaying'
 import Coin from './Coin';
 import Particles from 'react-particles-js'
 
-const Crypto = ({ showAboutMe, setShowAboutMe, track }) => {
+const Crypto = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying }) => {
     const [coins, setCoins] = useState([]);
     const [search, setSearch] = useState('');
-
-    let ourTrack, isPlaying;
-    try {
-        ourTrack = track.recenttracks.track[0]        
-    } catch (error) {
-        ourTrack = {'@attr': {nowPlaying: false}}
-    }
-    try {
-        isPlaying = ourTrack['@attr'].nowplaying
-    } catch (error) {
-        isPlaying = false
-    }
+    setShowAboutMe(undefined)
 
     useEffect(() => {
         const getValue = async () => {

@@ -78,7 +78,7 @@ const App = () => {
     const robKey = "5a8ebda021926a35d9ffb5aadc69ebc9"
     const davidName = "dvdshortland"
     const robName = "Robertcarter24"
-    const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${davidName}&api_key=${davidKey}&format=json&limit=1`)
+    const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${robName}&api_key=${robKey}&format=json&limit=1`)
     const data = await res.json()
     return data
   }
@@ -115,18 +115,18 @@ const App = () => {
         <>
           <div className='screen' >
             <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
-            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} />
+            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} bitcoinPrice={bitcoinPrice} />
           </div>
         </>
       )} />
       <Route path='/portfolio' render={(props) => (
         <>
-          <Portfolio track={trackData} setShowAboutMe={setShowAboutMe} />
+          <Portfolio ourTrack={ourTrack} isPlaying={isPlaying} setShowAboutMe={setShowAboutMe} />
         </>
       )} />
       <Route path='/crypto' render={(props) => (
         <>
-          <Crypto showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} />
+          <Crypto showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} />
         </>
       )} />
     </Router>

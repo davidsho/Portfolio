@@ -5,19 +5,7 @@ import NowPlaying from './NowPlaying'
 import Bitcoin from './Bitcoin'
 import Particles from 'react-particles-js'
 
-const Container = ({ showAboutMe, setShowAboutMe, track, bitcoinPrice }) => {
-    let ourTrack, isPlaying;
-    try {
-        ourTrack = track.recenttracks.track[0]        
-    } catch (error) {
-        ourTrack = {'@attr': {nowPlaying: false}}
-    }
-    try {
-        isPlaying = ourTrack['@attr'].nowplaying
-    } catch (error) {
-        isPlaying = false
-    }
-    
+const Container = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying, bitcoinPrice }) => {
     return (
         <div className={`container `} onClick={() => {showAboutMe && setShowAboutMe(false)}} >
             {/* ${showAboutMe || isPlaying ? 'hide' : ''} */}

@@ -26,4 +26,4 @@ to minimise delays.
 - [x] Improve image loading
 - [x] New page for crypto tracking
 - [x] Add crypto table
-- [ ] Format crypto table for mobile
+- [x] Format crypto table for mobile

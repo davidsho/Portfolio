@@ -6,7 +6,7 @@ const Coin = ({ name, price, symbol, marketcap, volume, image, priceChange }) =>
       <div className='coin-row'>
         <div className='coin'>
           <img src={image} alt='crypto' />
-          <h1>{name}</h1>
+          <h1 className='coin-name'>{name}</h1>
           <p className='coin-symbol'>{symbol}</p>
         </div>
         <div className='coin-data'>
