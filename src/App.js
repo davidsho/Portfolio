@@ -109,10 +109,10 @@ const App = () => {
 
   return (
     <Router>
+      {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
       <Route path='/' exact render={(props) => (
         <>
           <div className='screen' >
-            {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
             <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
             <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} track={trackData} bitcoinPrice={bitcoinPrice} />
           </div>
@@ -120,7 +120,6 @@ const App = () => {
       )} />
       <Route path='/portfolio' render={(props) => (
         <>
-            {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
             <Portfolio track={trackData} setShowAboutMe={setShowAboutMe} />
         </>
       )} />
