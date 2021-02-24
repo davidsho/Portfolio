@@ -23,5 +23,7 @@ to minimise delays.
 - [x] Add default background image
 - [x] Edit colouring of text boxes
 - [x] Remove particles.js entirely on mobile and while song playing on desktop
-- [x] Improved image loading
-- [ ] New page for crypto tracking
+- [x] Improve image loading
+- [x] New page for crypto tracking
+- [x] Add crypto table
+- [ ] Format crypto table for mobile
