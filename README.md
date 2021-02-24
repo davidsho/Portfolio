@@ -23,4 +23,4 @@ to minimise delays.
 - [x] Add default background image
 - [x] Edit colouring of text boxes
 - [x] Remove particles.js entirely on mobile and while song playing on desktop
-- [ ] Improved image loading
+- [x] Improved image loading
