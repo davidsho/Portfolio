@@ -27,3 +27,4 @@ to minimise delays.
 - [x] New page for crypto tracking
 - [x] Add crypto table
 - [x] Format crypto table for mobile
+- [x] Fix 404 error on /* routes
