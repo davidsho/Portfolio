@@ -1,4 +1,5 @@
 import Project from './Project'
+import ToTopButton from './ToTopButton'
 import FireflyLogo from './Images/FireflyLogo.png'
 
 const Projects = () => {
@@ -18,6 +19,7 @@ const Projects = () => {
         <div className='projects-container'>
             <Project id='firefly-companion' projectTitle='Firefly Companion' projectText={latinText} projectRole='founder | lead developer' projectImage={FireflyLogo} />
             {/* <Project id='table-tennis-league' projectTitle='Table Tennis League' projectText={cyberText} projectRole='founder | lead developer' projectImage={FireflyLogo} /> */}
+            {/* <ToTopButton /> */}
         </div>
     )
 }

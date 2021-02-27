@@ -1,10 +1,15 @@
+import { useEffect } from 'react'
 import Projects from './Projects'
 import HomeButton from './HomeButton'
 import NowPlaying from './NowPlaying'
+// import ToTopButton from './ToTopButton'
 import Particles from 'react-particles-js'
+import './styles/Portfolio.css'
 
 const Portfolio = ({ ourTrack, isPlaying, setShowAboutMe }) => {
-    setShowAboutMe(undefined)
+    useEffect(() => {
+        setShowAboutMe(undefined)
+    })
     return (
         <div className='container'>
             <div className='title'>
@@ -13,6 +18,7 @@ const Portfolio = ({ ourTrack, isPlaying, setShowAboutMe }) => {
             <HomeButton />
             {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
             <Projects />
+            {/* <ToTopButton /> */}
         </div>
     )
 }

@@ -2,12 +2,17 @@ import { useState, useEffect } from 'react'
 import HomeButton from './HomeButton'
 import NowPlaying from './NowPlaying'
 import Coin from './Coin';
+import ToTopButton from './ToTopButton'
 import Particles from 'react-particles-js'
+import './styles/Crypto.css'
 
 const Crypto = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying }) => {
     const [coins, setCoins] = useState([]);
     const [search, setSearch] = useState('');
-    setShowAboutMe(undefined)
+
+    useEffect(() => {
+        setShowAboutMe(undefined)
+    })
 
     useEffect(() => {
         const getValue = async () => {
@@ -64,6 +69,7 @@ const Crypto = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying }) => {
                         />
                     );
                 })}
+                {/* <ToTopButton /> */}
             </div>
         </div>
     )

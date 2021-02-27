@@ -4,6 +4,7 @@ import PortfolioButton from './PortfolioButton'
 import NowPlaying from './NowPlaying'
 import Bitcoin from './Bitcoin'
 import Particles from 'react-particles-js'
+import './styles/Home.css'
 
 const Container = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying, bitcoinPrice }) => {
     return (

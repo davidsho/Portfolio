@@ -28,3 +28,4 @@ to minimise delays.
 - [x] Add crypto table
 - [x] Format crypto table for mobile
 - [x] Fix 404 error on /* routes
+- [ ] Add back to top button on pages that require it
