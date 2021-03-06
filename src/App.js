@@ -12,15 +12,8 @@ const App = () => {
   const [trackData, setTrackData] = useState([])
   const [bitcoinPrice, setBitcoinPrice] = useState([])
 
-  // const state={
-  //   device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
-  //   orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
-  // }
-
-  // const [deviceState, setDeviceState] = useState(state)
-
   useEffect(() => {
-    console.log('Getting APIs')
+    console.log('Getting GitHub API')
     const getTasks = async () => {
       const d = await fetchGit()
       setGitData(d)
@@ -29,12 +22,10 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-
-  })
-
-  useEffect(() => {
+    console.log("Getting Track API")
     const getTracks = async () => {
-      const d = await fetchTrack()
+      const d = await fetchTrackAPI()
+      console.log(d)
       setTrackData(d)
     }
     getTracks()
@@ -42,6 +33,17 @@ const App = () => {
       getTracks()
     }, 6000);
   }, [])
+
+  // useEffect(() => {
+  //   const getTracks = async () => {
+  //     const d = await fetchTrack()
+  //     setTrackData(d)
+  //   }
+  //   getTracks()
+  //   setInterval(() => {
+  //     getTracks()
+  //   }, 6000);
+  // }, [])
 
   useEffect(() => {
     const getValue = async () => {
@@ -83,17 +85,12 @@ const App = () => {
     return data
   }
 
-  // const detect = () => {
-  //   setDeviceState({
-  //     device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
-  //     orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
-  //   })
-  // }
-
-  // window.addEventListener("resize", detect)
-
-  // console.log(deviceState)
-
+  // Fetch Track API
+  const fetchTrackAPI = async () => {
+    const res = await fetch('/api/trackData.json')
+    const data = await res.json()
+    return data
+  }
 
   let ourTrack, isPlaying;
   try {

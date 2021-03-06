@@ -30,4 +30,4 @@ to minimise delays.
 - [x] Format crypto table for mobile
 - [x] Fix 404 error on /* routes
 - [ ] Add back to top button on pages that require it
-- [ ] Write API for now playing into index.js so API Key is not exposed client-side
+- [x] Write API for now playing into index.js so API Key is not exposed client-side
