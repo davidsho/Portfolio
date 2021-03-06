@@ -12,11 +12,13 @@ const Portfolio = ({ ourTrack, isPlaying, setShowAboutMe }) => {
     })
     return (
         <div className='container'>
+            {/* <div id='topContainer'> */}
+            <HomeButton />
+            {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
+            {/* </div> */}
             <div className='title'>
                 <h1>My Portfolio</h1>
             </div>
-            <HomeButton />
-            {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
             <Projects />
             {/* <ToTopButton /> */}
         </div>

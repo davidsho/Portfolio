@@ -87,6 +87,13 @@ body, input, textarea, button {
   }
 }
 
+#topContainer {
+  top: 5%;
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
 #homeButton {
   position: absolute;
   margin: 0;

@@ -5,13 +5,16 @@
     margin: 0;
     position: absolute;
     top: 20%;
+    /* margin-top: 100px; */
     left: 5%;
     -ms-transform: translate(-5%, -15%);
     transform: translate(-5%, -15%);
     opacity: 1;
+    transition: 0.2s;
   }
   .projects-container {
     position: absolute;
+    /* margin-top: 100px; */
     top: 30%;
     /* left: 50%; */
     /* -ms-transform: translate(-50%, -55%);

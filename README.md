@@ -18,6 +18,7 @@ to minimise delays.
 - [x] Add portfolio section
 - [x] Enable now playing on portfolio
 - [ ] Add more than one project on portfolio
+- [ ] Write text for projects
 - [x] Fix support for mobile
 - [x] Improve layout for mobile
 - [x] Add default background image
@@ -29,3 +30,4 @@ to minimise delays.
 - [x] Format crypto table for mobile
 - [x] Fix 404 error on /* routes
 - [ ] Add back to top button on pages that require it
+- [ ] Write API for now playing into index.js so API Key is not exposed client-side
