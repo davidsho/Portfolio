@@ -31,3 +31,4 @@ to minimise delays.
 - [x] Fix 404 error on /* routes
 - [ ] Add back to top button on pages that require it
 - [x] Write API for now playing into index.js so API Key is not exposed client-side
+- [ ] Add separate page for top artists, top tracks and top albums

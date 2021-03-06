@@ -2,7 +2,6 @@ import TwitterLogo from './Images/TwitterLogo.png'
 import GitHubLogo from './Images/GitHubLogo.png'
 import MailLogo from './Images/MailLogo.png'
 import ProfileImage from './Images/ProfileImage.jpg'
-console.log(TwitterLogo)
 
 const AboutMe = ({ obj, name, show }) => {
 

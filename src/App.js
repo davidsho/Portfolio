@@ -10,22 +10,24 @@ const App = () => {
   const [showAboutMe, setShowAboutMe] = useState()
   const [gitData, setGitData] = useState([])
   const [trackData, setTrackData] = useState([])
+  const [artistsData, setArtistsData] = useState([])
   const [bitcoinPrice, setBitcoinPrice] = useState([])
 
+  // Use Effect for GitHub API
   useEffect(() => {
     console.log('Getting GitHub API')
-    const getTasks = async () => {
+    const getGitHub = async () => {
       const d = await fetchGit()
       setGitData(d)
     }
-    getTasks()
+    getGitHub()
   }, [])
 
+  // Use Effect for Track API
   useEffect(() => {
     console.log("Getting Track API")
     const getTracks = async () => {
       const d = await fetchTrackAPI()
-      console.log(d)
       setTrackData(d)
     }
     getTracks()
@@ -34,23 +36,22 @@ const App = () => {
     }, 6000);
   }, [])
 
-  // useEffect(() => {
-  //   const getTracks = async () => {
-  //     const d = await fetchTrack()
-  //     setTrackData(d)
-  //   }
-  //   getTracks()
-  //   setInterval(() => {
-  //     getTracks()
-  //   }, 6000);
-  // }, [])
+  // Use Effect for Artist API
+  useEffect(() => {
+    console.log("Getting Artists API")
+    const getArtists = async () => {
+      const d = await fetchTopArtistsAPI()
+      console.log(d)
+      setArtistsData(d)
+    }
+    getArtists()
+  }, [])
 
+  // Use Effect for Bitcoin API
   useEffect(() => {
     const getValue = async () => {
       const d = await fetchBitcoin()
       const val = d.bpi.USD.rate
-      // const val = d.USD.buy.toFixed(2)
-      console.log(val)
       setBitcoinPrice(val)
     }
     getValue()
@@ -74,20 +75,16 @@ const App = () => {
     return data
   }
 
-  // Fetch LastFM Track
-  const fetchTrack = async () => {
-    const davidKey = "dffc35d8f8602596a39469caa1739857"
-    const robKey = "5a8ebda021926a35d9ffb5aadc69ebc9"
-    const davidName = "dvdshortland"
-    const robName = "Robertcarter24"
-    const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${robName}&api_key=${robKey}&format=json&limit=1`)
+  // Fetch Track API
+  const fetchTrackAPI = async () => {
+    const res = await fetch('/api/trackData.json')
     const data = await res.json()
     return data
   }
 
-  // Fetch Track API
-  const fetchTrackAPI = async () => {
-    const res = await fetch('/api/trackData.json')
+  // Fetch Top Artists API
+  const fetchTopArtistsAPI = async () => {
+    const res = await fetch('/api/topArtistsData.json')
     const data = await res.json()
     return data
   }

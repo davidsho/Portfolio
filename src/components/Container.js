@@ -3,6 +3,7 @@ import AboutMeButton from './AboutMeButton'
 import PortfolioButton from './PortfolioButton'
 import NowPlaying from './NowPlaying'
 import Bitcoin from './Bitcoin'
+import Artists from './Artists'
 import Particles from 'react-particles-js'
 import './styles/Home.css'
 
@@ -14,6 +15,7 @@ const Container = ({ showAboutMe, setShowAboutMe, ourTrack, isPlaying, bitcoinPr
             <AboutMeButton onPress={() => setShowAboutMe(!showAboutMe)} />
             <PortfolioButton setShowAboutMe={setShowAboutMe} />
             {isPlaying ? <NowPlaying track={ourTrack} /> : <Particles id='particles-js' />}
+            <Artists />
             <Bitcoin price={bitcoinPrice} />
         </div>
     )
