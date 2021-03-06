@@ -13,7 +13,7 @@ const fetchTrack = async () => {
   const davidName = "dvdshortland"
   const robName = "Robertcarter24"
 
-  const res = await axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${davidName}&api_key=${robKey}&format=json&limit=1`);
+  const res = await axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${robName}&api_key=${robKey}&format=json&limit=1`);
   const data = await res.data;
   return data;
 }
