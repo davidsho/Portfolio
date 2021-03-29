@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Container from './components/Container'
 import AboutMe from './components/AboutMe'
 import Portfolio from './components/Portfolio'
 import Crypto from './components/Crypto'
+import NotFound from './components/NotFound'
 import DefaultBackground from './components/Images/DefaultBackground.jpeg'
 
 const App = () => {
@@ -105,24 +106,27 @@ const App = () => {
   return (
     <Router>
       {isPlaying ? <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${ourTrack.image.slice(-1)[0]['#text']})` }}></div> : <div className='bg-image' style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${DefaultBackground})` }}></div>}
-      <Route path='/' exact render={(props) => (
-        <>
-          <div className='screen' >
-            <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
-            <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} bitcoinPrice={bitcoinPrice} />
-          </div>
-        </>
-      )} />
-      <Route path='/portfolio' render={(props) => (
-        <>
-          <Portfolio ourTrack={ourTrack} isPlaying={isPlaying} setShowAboutMe={setShowAboutMe} />
-        </>
-      )} />
-      <Route path='/crypto' render={(props) => (
-        <>
-          <Crypto showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} />
-        </>
-      )} />
+      <Switch>
+        <Route path='/' exact render={(props) => (
+          <>
+            <div className='screen' >
+              <AboutMe show={showAboutMe} name="David Shortland" obj={gitData} />
+              <Container showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} bitcoinPrice={bitcoinPrice} />
+            </div>
+          </>
+        )} />
+        <Route path='/portfolio' render={(props) => (
+          <>
+            <Portfolio ourTrack={ourTrack} isPlaying={isPlaying} setShowAboutMe={setShowAboutMe} />
+          </>
+        )} />
+        <Route path='/crypto' render={(props) => (
+          <>
+            <Crypto showAboutMe={showAboutMe} setShowAboutMe={setShowAboutMe} ourTrack={ourTrack} isPlaying={isPlaying} />
+          </>
+        )} />
+        <Route component={NotFound} />
+      </Switch>
     </Router>
   )
 }

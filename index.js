@@ -47,10 +47,11 @@ app.get('/api/topArtistsData.json', (req, res) => {
   res.json(topArtistData)
 })
 
+const routes = ['/','/portfolio','crypto']
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
 
 app.listen(8000);
 console.log("Running on port 8000")
